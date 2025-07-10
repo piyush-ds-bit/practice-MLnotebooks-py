@@ -2,23 +2,18 @@
 # from bs4 import BeautifulSoup
 # import os
 #
-# # Set the website URL
-# base_url = "https://sites.google.com/view/dr-a-halder/subjects"  # Change to your professor's website
+# base_url = "https://sites.google.com/view/dr-a-halder/subjects"  
 # page = requests.get(base_url)
 #
-# # Parse HTML
 # soup = BeautifulSoup(page.content, "html.parser")
 #
-# # Find all PPT links
 # ppt_links = []
 # for link in soup.find_all("a", href=True):
 #     if link["href"].endswith((".ppt", ".pptx")):
 #         ppt_links.append(base_url + link["href"])
 #
-# # Create a folder to save PPTs
 # os.makedirs("PPT_Files", exist_ok=True)
 #
-# # Download PPT files
 # for ppt_url in ppt_links:
 #     file_name = ppt_url.split("/")[-1]
 #     file_path = os.path.join("PPT_Files", file_name)
